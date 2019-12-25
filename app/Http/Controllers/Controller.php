@@ -14,6 +14,20 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    public function __construct()
+    {
+    	$sidebarMenus = [
+	        "home"  => ["url" => "backoffice", "prefix" => "backoffice"],
+	        "categories" => ["url" => "backoffice/categories", "prefix" => "backoffice/categories*"]
+	    ];
+
+	    foreach ($sidebarMenus as &$value) {
+	    	$value = (object) $value;
+	    }
+
+    	view()->share('sidebarMenus', $sidebarMenus);
+    }
+
     /**
 	* Paginate collection of array.
 	*

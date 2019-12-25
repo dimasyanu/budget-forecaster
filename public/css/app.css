@@ -18325,8 +18325,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
     position: absolute;
     right: 5px;
     top: 10px;
-    color: #767676;
 }
 .sidebar-pin:hover {
-    color: #1b1c1d;
+    color: #00b5ad;
 }
