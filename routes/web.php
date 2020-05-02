@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +21,4 @@ Route::group(['prefix' => 'backoffice'], function() {
 	Route::get('/', 'DashboardController@index');
 	Route::get('categories', 'CategoryController@index');
 });
+
